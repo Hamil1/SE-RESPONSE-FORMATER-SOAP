@@ -1,7 +1,7 @@
 {
     "name": "victor.diaz/se-response-formater-soap",
     "description": "Este proyecto cambia el formato de respuesta que nos devuelven las aseguradoras que implementan SOAP y los transforma en uno que Softexpert si puede interpretar.",
-    "type": "project",
+    "type": "library",
     "require": {
         "php": "^7.4"
     },
@@ -12,5 +12,5 @@
             "email": "hamil151@hotmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "stable"
 }
