@@ -12,5 +12,10 @@
             "email": "hamil151@hotmail.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "SeFormater\\": "src/"
+        }
+    }
 }
