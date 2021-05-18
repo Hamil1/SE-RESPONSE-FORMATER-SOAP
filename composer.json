@@ -3,6 +3,7 @@
     "description": "Este proyecto cambia el formato de respuesta que nos devuelven las aseguradoras que implementan SOAP y los transforma en uno que Softexpert si puede interpretar.",
     "type": "library",
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Victor H. Diaz",
