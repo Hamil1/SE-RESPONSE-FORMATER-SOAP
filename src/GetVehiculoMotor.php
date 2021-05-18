@@ -3,7 +3,6 @@
 namespace SeFormater;
 class GetVehiculoMotor{
 
-
     protected function getVigencia($object){
         echo 'getVigencia';
     }
@@ -20,7 +19,7 @@ class GetVehiculoMotor{
         echo 'updateEachObjectToSingleLevel';
     }
 
-    protected function seFormater($object){
+    public function seFormater($object){
         echo 'seFormater';
         $this->updateEachObjectToSingleLevel($object);
         $this->getCobertura($object);
