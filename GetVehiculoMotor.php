@@ -20,6 +20,7 @@ class GetVehiculoMotor{
     }
 
     protected function seFormater($object){
+        echo 'seFormater';
         $this->updateEachObjectToSingleLevel($object);
         $this->getCobertura($object);
         $this->getObjetoAsegurado($object);
