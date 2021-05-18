@@ -11,5 +11,14 @@
     ],
     "require": {
         "php": "^7.1.3"
+    },
+    "support": {
+        "issues": "https://github.com/Hamil1/se-response-formater-soap/issues",
+        "source": "https://github.com/Hamil1/se-response-formater-soap"
+    },
+    "autoload": {
+        "psr-0": {
+            "se-response-formater-soap": "src/"
+        }
     }
 }
