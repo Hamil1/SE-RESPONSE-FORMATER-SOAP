@@ -3,28 +3,32 @@
 namespace SeFormater;
 class GetVehiculoMotor{
 
-    protected function getVigencia($object){
-        echo 'getVigencia';
-    }
+    public function seFormater($firstLevel, $objetoAsegurado, $vigencia){
+        
+        $object = (object) array_change_key_case((array) $firstLevel, CASE_LOWER);
+        
+        if(isset($object->vigencia)){
+            unset($object->vigencia);
+        }
 
-    protected function getObjetoAsegurado($object){
-        echo 'getObjetoAsegurado';
-    }
+        if(isset($object->objetoasegurado)){
+            unset($object->objetoasegurado);
+        }
 
-    protected function getCobertura($object){
-        echo 'getCobertura';
-    }
+        if(isset($object->cobertura)){
+            unset($object->cobertura);
+        }
 
-    protected function updateEachObjectToSingleLevel($object){
-        echo 'updateEachObjectToSingleLevel';
-    }
+        $objetoAseguradoFormated = array_change_key_case(array_combine(array_keys((array) $objetoAsegurado), array_values((array) $objetoAsegurado)), CASE_LOWER);
+        $vigenciaFormated = array_change_key_case(array_combine(array_keys((array) $vigencia), array_values((array) $vigencia)), CASE_LOWER);
 
-    public function seFormater($object){
-        echo 'seFormater';
-        $this->updateEachObjectToSingleLevel($object);
-        $this->getCobertura($object);
-        $this->getObjetoAsegurado($object);
-        $this->getVigencia($object);
+        $vigenciaFormated['finvigencia'] = date("d/m/Y", strtotime($vigenciaFormated['finvigencia']));
+        $vigenciaFormated['iniciovigencia'] = date("d/m/Y", strtotime($vigenciaFormated['iniciovigencia']));
+
+        $objectResponse = (object) array_merge((array) $object, $objetoAseguradoFormated, $vigenciaFormated);
+
+        return $objectResponse;
+
     }
 }
 
